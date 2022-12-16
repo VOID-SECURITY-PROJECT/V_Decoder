@@ -32,4 +32,4 @@ public class MainActivity extends Activity {
     }
 }
 
-// @haltenny is here!
+// @haltenny is here now!
