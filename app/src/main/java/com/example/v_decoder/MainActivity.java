@@ -23,11 +23,13 @@ public class MainActivity extends Activity {
         To_Bin.setOnClickListener(v -> {
             Intent i = new Intent(this, TextToBinary.class);
             startActivity(i);
+            overridePendingTransition(R.anim.slidein, R.anim.slideout);
         });
 
         To_Txt.setOnClickListener(v -> {
             Intent i = new Intent(this, BinaryToText.class);
             startActivity(i);
+            overridePendingTransition(R.anim.slidein, R.anim.slideout);
         });
     }
 }
