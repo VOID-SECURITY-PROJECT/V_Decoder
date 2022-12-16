@@ -2,15 +2,18 @@ package com.example.v_decoder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class BinaryToText extends Activity {
@@ -19,6 +22,7 @@ public class BinaryToText extends Activity {
     public Button ConvertButton;
     public Button CopyButton;
     public Button ClearButton;
+    public android.widget.ImageView ImageButton;
 
     public static String binaryToString(String input) {
         String[] parts = input.split(" ");
@@ -33,6 +37,7 @@ public class BinaryToText extends Activity {
         return sb.toString();
 
     }
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,8 +48,12 @@ public class BinaryToText extends Activity {
         EditText = findViewById(R.id.textWritter);
         CopyButton = (Button)findViewById(R.id.copy2);
         ClearButton = (Button)findViewById(R.id.clear);
+        ImageButton = (ImageView) findViewById(R.id.BackButton);
+
 
         TextView.setMovementMethod(new ScrollingMovementMethod());
+
+        ImageButton.setColorFilter(getResources().getColor(R.color.background));
 
         ConvertButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,5 +78,10 @@ public class BinaryToText extends Activity {
             }
         });
 
+        ImageButton.setOnClickListener(v -> {
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+            overridePendingTransition(R.anim.testanim, R.anim.testanim2);
+        });
     }
 }
