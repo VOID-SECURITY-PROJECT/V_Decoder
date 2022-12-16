@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextToBinary">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="190dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="96dp"
+        android:fontFamily="@font/encode_sans_extralight"
+        android:text=" TEXT TO BINARY"
+        android:textAlignment="center"
+        android:textColor="@color/background"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EditText"
+        android:layout_width="289dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="58dp"
+        android:ems="10"
+        android:fontFamily="@font/encode_sans_extralight"
+        android:hint="Write here"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="348dp"
+        android:layout_height="367dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/encode_sans_extralight"
+        android:scrollbars="vertical"
+        android:textAlignment="center"
+        android:textColor="@color/background"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ConvertButton" />
+
+    <Button
+        android:id="@+id/ConvertButton"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/background"
+        android:fontFamily="@font/encode_sans_extralight"
+        android:text="CONVERT"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditText" />
+
+    <Button
+        android:id="@+id/copy"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/background"
+        android:fontFamily="@font/encode_sans_extralight"
+        android:text="COPY"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditText" />
+
+    <Button
+        android:id="@+id/clear2"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/background"
+        android:fontFamily="@font/encode_sans_extralight"
+        android:text="CLEAR"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
