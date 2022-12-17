@@ -98,13 +98,13 @@
     <ImageView
         android:id="@+id/fuckButton0"
         android:layout_width="77dp"
-        android:layout_height="78dp"
+        android:layout_height="77dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="TODO"
         android:src="?attr/actionModeCloseDrawable"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/background"
-        android:contentDescription="TODO" />
+        app:tint="@color/background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
