@@ -82,7 +82,7 @@ public class TextToBinary extends Activity {
         ImageButton0.setOnClickListener(v -> {
             Intent i = new Intent(this, MainActivity.class);
             startActivity(i);
-            overridePendingTransition(R.anim.testanim, R.anim.testanim2);
+            overridePendingTransition(R.anim.slidein11, R.anim.testanim2);
         });
 
     }
