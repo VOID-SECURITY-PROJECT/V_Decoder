@@ -1,11 +1,12 @@
 package com.example.v_decoder;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,6 +15,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class TextToBinary extends Activity {
@@ -22,6 +24,7 @@ public class TextToBinary extends Activity {
     public Button ConvertButton;
     public Button CopyButton;
     public Button clearButton;
+    public android.widget.ImageView ImageButton0;
 
     public static String stringToBinary(String s) {
 
@@ -36,7 +39,7 @@ public class TextToBinary extends Activity {
         return answer.toString();
     }
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text_to_binary);
 
@@ -46,6 +49,11 @@ public class TextToBinary extends Activity {
         CopyButton = (Button)findViewById(R.id.copy);
         clearButton = (Button)findViewById(R.id.clear2);
         TextView.setMovementMethod(new ScrollingMovementMethod());//позволяет листать текст
+        ImageButton0 = (ImageView) findViewById(R.id.fuckButton0);
+
+        TextView.setMovementMethod(new ScrollingMovementMethod());
+
+        ImageButton0.setColorFilter(getResources().getColor(R.color.background));
 
         ConvertButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +77,12 @@ public class TextToBinary extends Activity {
                 EditText.setText(" ");
                 TextView.setText(" ");
             }
+        });
+
+        ImageButton0.setOnClickListener(v -> {
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+            overridePendingTransition(R.anim.testanim, R.anim.testanim2);
         });
 
     }

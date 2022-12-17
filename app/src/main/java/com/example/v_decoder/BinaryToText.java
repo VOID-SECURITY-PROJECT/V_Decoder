@@ -48,6 +48,7 @@ public class BinaryToText extends Activity {
         EditText = findViewById(R.id.textWritter);
         CopyButton = (Button)findViewById(R.id.copy2);
         ClearButton = (Button)findViewById(R.id.clear);
+        TextView.setMovementMethod(new ScrollingMovementMethod());
         ImageButton = (ImageView) findViewById(R.id.BackButton);
 
 
