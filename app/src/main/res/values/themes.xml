@@ -16,6 +16,5 @@
         <item name="android:textColor">@color/Button_txt</item>
         <item name="android:navigationBarColor">@color/white</item>
 
-
     </style>
 </resources>

@@ -8,9 +8,11 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Insets;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
+import android.view.WindowInsets;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -23,7 +25,7 @@ public class BinaryToText extends Activity {
     public Button CopyButton;
     public Button ClearButton;
     public android.widget.ImageView ImageButton;
-
+    public Insets getInsets;
     public static String binaryToString(String input) {
         String[] parts = input.split(" ");
         StringBuilder sb = new StringBuilder();
@@ -37,7 +39,6 @@ public class BinaryToText extends Activity {
         return sb.toString();//
 
     }
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +56,7 @@ public class BinaryToText extends Activity {
         TextView.setMovementMethod(new ScrollingMovementMethod());
 
         ImageButton.setColorFilter(getResources().getColor(R.color.background));
+
 
         ConvertButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,8 +82,7 @@ public class BinaryToText extends Activity {
         });
 
         ImageButton.setOnClickListener(v -> {
-            Intent i = new Intent(this, MainActivity.class);
-            startActivity(i);
+            finish();
             overridePendingTransition(R.anim.slidein11, R.anim.slideout11);
         });
     }

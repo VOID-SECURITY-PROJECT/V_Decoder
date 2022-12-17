@@ -55,6 +55,8 @@ public class TextToBinary extends Activity {
 
         ImageButton0.setColorFilter(getResources().getColor(R.color.background));
 
+        Intent i = new Intent(this, MainActivity.class);
+
         ConvertButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,8 +82,7 @@ public class TextToBinary extends Activity {
         });
 
         ImageButton0.setOnClickListener(v -> {
-            Intent i = new Intent(this, MainActivity.class);
-            startActivity(i);
+            finish();
             overridePendingTransition(R.anim.slidein11, R.anim.testanim2);
         });
 

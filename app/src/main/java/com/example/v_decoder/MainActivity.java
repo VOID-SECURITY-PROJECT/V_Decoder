@@ -11,7 +11,7 @@ import android.widget.Button;
 public class MainActivity extends Activity {
     public Button To_Bin;
     public Button To_Txt;
-    @SuppressLint("MissingInflatedId")
+    public Button image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,16 +20,21 @@ public class MainActivity extends Activity {
         To_Bin = (Button)findViewById(R.id.To_Bin);
         To_Txt = (Button)findViewById(R.id.To_Txt);
 
+        Intent i = new Intent(this, TextToBinary.class);
+        Intent j = new Intent(this, BinaryToText.class);
+        
+
+        
         To_Bin.setOnClickListener(v -> {
-            Intent i = new Intent(this, TextToBinary.class);
             startActivity(i);
             overridePendingTransition(R.anim.slidein, R.anim.slideout);
+
         });
 
         To_Txt.setOnClickListener(v -> {
-            Intent i = new Intent(this, BinaryToText.class);
-            startActivity(i);
+            startActivity(j);
             overridePendingTransition(R.anim.slidein, R.anim.slideout);
+
         });
     }
 }
