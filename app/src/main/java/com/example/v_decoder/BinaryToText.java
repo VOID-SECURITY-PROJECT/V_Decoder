@@ -34,7 +34,7 @@ public class BinaryToText extends Activity {
             sb.append(c);
         }
 
-        return sb.toString();
+        return sb.toString();//
 
     }
     @SuppressLint("WrongViewCast")

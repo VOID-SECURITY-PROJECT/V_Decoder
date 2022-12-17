@@ -27,7 +27,7 @@ public class TextToBinary extends Activity {
     public android.widget.ImageView ImageButton0;
 
     public static String stringToBinary(String s) {
-
+//
         StringBuilder answer = new StringBuilder();
 
         for (int i = 0; i < s.length(); i++) {

@@ -1,6 +1,6 @@
 package com.example.v_decoder;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity; //
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
