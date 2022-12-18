@@ -25,7 +25,7 @@ public class BinaryToText extends Activity {
     public Button CopyButton;
     public Button ClearButton;
     public android.widget.ImageView ImageButton;
-    public Insets getInsets;
+
     public static String binaryToString(String input) {
         String[] parts = input.split(" ");
         StringBuilder sb = new StringBuilder();
@@ -62,9 +62,9 @@ public class BinaryToText extends Activity {
             @Override
             public void onClick(View view) {
                 String edit = EditText.getText().toString();
-                TextView.setText(binaryToString(edit));
+                    TextView.setText(binaryToString(edit));
+                }
 
-            }
         });
 
         CopyButton.setOnClickListener(v -> {

@@ -10,4 +10,5 @@
     <color name="background">#00FFB4</color>
     <color name="Button_txt_night">#000000</color>
     <color name="Button_txt">#FFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>
