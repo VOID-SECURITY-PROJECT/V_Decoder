@@ -49,4 +49,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/To_Bin" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="391dp"
+        android:layout_height="99dp"
+        android:layout_marginBottom="172dp"
+        android:src="@drawable/easteregg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
