@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
         image = (ImageView) findViewById(R.id.imageView);
         Intent i = new Intent(this, TextToBinary.class);
         Intent j = new Intent(this, BinaryToText.class);
+        Intent s = new Intent(this, secret.class);
 
 
         To_Bin.setOnClickListener(v -> {
@@ -43,6 +44,12 @@ public class MainActivity extends Activity {
 
         To_Txt.setOnClickListener(v -> {
             startActivity(j);
+            overridePendingTransition(R.anim.slidein, R.anim.slideout);
+
+        });
+
+        image.setOnClickListener(v -> {
+            startActivity(s);
             overridePendingTransition(R.anim.slidein, R.anim.slideout);
 
         });
